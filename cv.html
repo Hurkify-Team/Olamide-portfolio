@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olamide Sobowale | Curriculum Vitae</title>
+  <meta name="description" content="Curriculum Vitae of Olamide Sobowale - ICT Officer, Software Engineer, FULL-STACK DEVELOPER, Programme Analyst, and Brand Manager.">
+  <meta property="og:title" content="Olamide Sobowale | Curriculum Vitae">
+  <meta property="og:description" content="Dedicated ICT professional with proven impact in software engineering, brand management, and ICT analysis.">
+  <meta property="og:image" content="images/og.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="images/og.png">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #eef4fb;
+      --ink: #0f172a;
+      --muted: #43506b;
+      --teal: #0f766e;
+      --blue: #1d4ed8;
+      --line: rgba(14, 31, 53, 0.14);
+      --paper: rgba(255, 255, 255, 0.88);
+      --radius-xl: 24px;
+      --radius-lg: 16px;
+      --shadow: 0 22px 46px rgba(11, 21, 39, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", "Sora", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 2%, rgba(29, 78, 216, 0.14), transparent 34%),
+        radial-gradient(circle at 88% 13%, rgba(15, 118, 110, 0.14), transparent 36%),
+        linear-gradient(148deg, #f5f8fd 0%, #ecf2fb 50%, #e9f1fb 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    .page-nav {
+      position: sticky;
+      top: 12px;
+      z-index: 50;
+      margin-top: 16px;
+      margin-bottom: 22px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 12px 26px rgba(8, 18, 34, 0.09);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-left img {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid #fff;
+      box-shadow: 0 8px 16px rgba(11, 21, 39, 0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+      padding: 7px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      border-color: rgba(29, 78, 216, 0.3);
+      color: var(--ink);
+      background: rgba(29, 78, 216, 0.08);
+      outline: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      padding: 11px 14px;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .btn-download {
+      color: #fff;
+      background: linear-gradient(130deg, #0f172a 0%, #1d4ed8 130%);
+      box-shadow: 0 14px 28px rgba(11, 21, 39, 0.25);
+    }
+
+    .btn-download:hover,
+    .btn-download:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 34px rgba(11, 21, 39, 0.32);
+      outline: none;
+    }
+
+    .nav-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-home {
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 20px rgba(11, 21, 39, 0.08);
+    }
+
+    .btn-home:hover,
+    .btn-home:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(11, 21, 39, 0.14);
+      outline: none;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+      padding: clamp(20px, 3vw, 32px);
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      right: -80px;
+      top: -90px;
+      background: radial-gradient(circle at center, rgba(29, 78, 216, 0.2), transparent 70%);
+      pointer-events: none;
+    }
+
+    .avatar {
+      width: 128px;
+      height: 128px;
+      border-radius: 999px;
+      border: 4px solid #fff;
+      box-shadow: 0 12px 26px rgba(11, 21, 39, 0.2);
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    .name {
+      margin: 0;
+      font-family: "Sora", "Manrope", sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tagline {
+      margin: 10px 0 0;
+      color: #0f766e;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-grid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-item {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: rgba(255, 255, 255, 0.8);
+      min-height: 62px;
+    }
+
+    .contact-item span {
+      display: block;
+      font-size: 0.74rem;
+      color: #5d6a86;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-item p,
+    .contact-item a {
+      margin: 0;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #1e293b;
+      word-break: break-word;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--paper);
+      box-shadow: 0 14px 30px rgba(11, 21, 39, 0.08);
+      padding: clamp(18px, 2.8vw, 26px);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-family: "Sora", "Manrope", sans-serif;
+      letter-spacing: -0.02em;
+      font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+    }
+
+    .summary {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.72;
+    }
+
+    .section-space {
+      margin-top: 16px;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 2px;
+      padding-left: 22px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, #1d4ed8, #0f766e 70%);
+      opacity: 0.75;
+    }
+
+    .role-item {
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 4px;
+    }
+
+    .role-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .role-item::before {
+      content: "";
+      position: absolute;
+      left: -19px;
+      top: 3px;
+      width: 11px;
+      height: 11px;
+      border-radius: 999px;
+      background: #1d4ed8;
+      box-shadow: 0 0 0 5px rgba(29, 78, 216, 0.16);
+    }
+
+    .role-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .role-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .role-company {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #155e75;
+    }
+
+    .role-date {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #5d6a86;
+    }
+
+    .role-item ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.62;
+    }
+
+    .list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.62;
+    }
+
+    .two-col-list {
+      columns: 2;
+      column-gap: 18px;
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.62;
+    }
+
+    .two-col-list li,
+    .list li {
+      break-inside: avoid;
+      margin-bottom: 7px;
+    }
+
+    .hint {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: #5d6a86;
+      font-weight: 600;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #1d4ed8;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .two-col-list {
+        columns: 1;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page-nav {
+        top: 6px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .avatar {
+        width: 104px;
+        height: 104px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page-nav,
+      .hint,
+      .back-link {
+        display: none !important;
+      }
+
+      .container {
+        width: 100%;
+        max-width: none;
+      }
+
+      .hero,
+      .card {
+        box-shadow: none;
+        border-color: #c9d2df;
+        background: #fff;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="page-nav" aria-label="CV section navigation">
+      <div class="nav-left">
+        <img src="images/image_12.png" alt="Portrait of Olamide Sobowale">
+        <span>Curriculum Vitae</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#summary">Summary</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-home" href="index.html" aria-label="Go back to home page">Home</a>
+        <button id="downloadPdfButton" class="btn btn-download" type="button" aria-label="Download CV as PDF">
+          Download CV (PDF)
+        </button>
+      </div>
+    </nav>
+
+    <header class="hero reveal" role="banner">
+      <img class="avatar" src="images/image_12.png" alt="Portrait photo of Olamide Sobowale">
+
+      <div>
+        <h1 class="name">Olamide Sobowale</h1>
+        <p class="tagline">ICT Officer | Software Engineer | FULL-STACK DEVELOPER | Programme Analyst | Brand Manager</p>
+
+        <div class="contact-grid" aria-label="Contact information">
+          <div class="contact-item">
+            <span>Email</span>
+            <a href="mailto:sobowaleolamide2@gmail.com">sobowaleolamide2@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span>Phone</span>
+            <a href="tel:+2349045083581">+234 904 508 3581</a>
+          </div>
+          <div class="contact-item">
+            <span>Location</span>
+            <p>Cardoso Street, Mushin, Lagos</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <main>
+        <section id="summary" class="card reveal" aria-labelledby="summary-title">
+          <h2 id="summary-title">Professional Summary</h2>
+          <p class="summary">
+            I am a dedicated ICT professional with a passion for continuous improvement and a strong track record across software
+            engineering, brand management, and ICT analysis. I combine technical execution, product thinking, and business awareness to
+            build reliable systems, improve workflows, and create measurable growth for teams and organisations.
+          </p>
+        </section>
+
+        <section id="experience" class="card section-space reveal" aria-labelledby="experience-title">
+          <h2 id="experience-title">Experience</h2>
+
+          <div class="timeline">
+            <article class="role-item">
+              <div class="role-head">
+                <div>
+                  <p class="role-title">Software Engineer</p>
+                  <p class="role-company">HEFAMAA</p>
+                </div>
+                <span class="role-date">2023 - Present</span>
+              </div>
+              <ul>
+                <li>Delivered robust software projects aligned with operational and client requirements.</li>
+                <li>Collaborated across teams and provided technical leadership during implementation cycles.</li>
+                <li>Improved platform performance and maintainability through structured optimisation efforts.</li>
+              </ul>
+            </article>
+
+            <article class="role-item">
+              <div class="role-head">
+                <div>
+                  <p class="role-title">ICT Analyst</p>
+                  <p class="role-company">JandR Hospital</p>
+                </div>
+                <span class="role-date">2023 - 2024</span>
+              </div>
+              <ul>
+                <li>Improved system efficiency through technical audits, diagnostics, and targeted process improvements.</li>
+                <li>Supported data security initiatives and enforced best practices for safer information handling.</li>
+                <li>Automated workflow bottlenecks to reduce manual operations and increase service turnaround.</li>
+              </ul>
+            </article>
+
+            <article class="role-item">
+              <div class="role-head">
+                <div>
+                  <p class="role-title">Brand Manager</p>
+                  <p class="role-company">Ajeh Media &amp; Advertising</p>
+                </div>
+                <span class="role-date">2020 - 2023</span>
+              </div>
+              <ul>
+                <li>Designed and executed branding strategies that strengthened market visibility and audience engagement.</li>
+                <li>Led campaign planning and content direction across digital and traditional channels.</li>
+                <li>Managed client communications and delivery alignment to improve campaign outcomes.</li>
+              </ul>
+            </article>
+
+            <article class="role-item">
+              <div class="role-head">
+                <div>
+                  <p class="role-title">Computer Operator</p>
+                  <p class="role-company">NNPC Ltd.</p>
+                </div>
+                <span class="role-date">2021 - 2022</span>
+              </div>
+              <ul>
+                <li>Monitored and documented gas pressure and temperature operations for daily reporting.</li>
+                <li>Maintained operational records and supported process continuity in mission-critical workflows.</li>
+                <li>Recognised with “Best Staff of the Year” for performance excellence and commitment.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <section id="education" class="card reveal" aria-labelledby="education-title">
+          <h2 id="education-title">Education</h2>
+          <ul class="list">
+            <li><strong>The Polytechnic Iresi</strong> - Computer Science (2020 - 2023)</li>
+            <li><strong>University of the People</strong> - Bachelor of Computer Science &amp; Bachelor of Health Science (2023 - 2026 expected)</li>
+          </ul>
+        </section>
+
+        <section id="skills" class="card section-space reveal" aria-labelledby="skills-title">
+          <h2 id="skills-title">Skills</h2>
+          <ul class="two-col-list">
+            <li>Software Development &amp; System Optimisation</li>
+            <li>Data Science</li>
+            <li>Agile Project Management</li>
+            <li>Customer Relationship Management</li>
+            <li>Social Media Marketing &amp; Brand Strategy</li>
+            <li>Business Communication</li>
+            <li>Effective Leadership</li>
+            <li>Cybersecurity Awareness</li>
+            <li>Data Analytics &amp; Problem Solving</li>
+            <li>Business Consulting &amp; Writing</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <section id="certifications" class="card reveal" aria-labelledby="certifications-title">
+      <h2 id="certifications-title">Certifications</h2>
+      <ul class="two-col-list">
+        <li>TRREE - Good Clinical Practice</li>
+        <li>TRREE - Informed Consent</li>
+        <li>TRREE - Research Ethics Evaluation</li>
+        <li>TRREE - Introduction to Research Ethics</li>
+        <li>Leverage Generative AI for Project Management: Strategic Insights and Future Trends</li>
+        <li>Business Communication</li>
+        <li>Finding Funding</li>
+        <li>Data Science &amp; Analytics</li>
+        <li>Social Media Marketing</li>
+        <li>Digital Business Skills</li>
+        <li>Customer Relationship Management</li>
+        <li>Marketing Foundations: E-commerce</li>
+        <li>Marketing Foundations: Customer Decision Journey</li>
+        <li>Setting a Vision: How to Gain Clarity on Your Goals</li>
+        <li>Advanced as a Digital Marketing Specialist</li>
+        <li>Email and Newsletter Marketing Foundations</li>
+        <li>Content Marketing Foundations</li>
+        <li>Social Media Marketing Foundations</li>
+        <li>SEO Foundations</li>
+        <li>Marketing Foundations</li>
+        <li>The Data Science of Healthcare, Medicine, and Public Health</li>
+        <li>Digital Marketing Foundations</li>
+      </ul>
+      <p class="hint">Tip: use the Download CV button to export this page as PDF.</p>
+    </section>
+
+    <a class="back-link" href="index.html" aria-label="Back to portfolio home">← Back to Portfolio</a>
+  </div>
+
+  <script>
+    const titleBeforePrint = document.title;
+    const downloadPdfButton = document.getElementById("downloadPdfButton");
+
+    if (downloadPdfButton) {
+      downloadPdfButton.addEventListener("click", () => {
+        document.title = "Olamide-Sobowale-CV";
+        window.print();
+        setTimeout(() => {
+          document.title = titleBeforePrint;
+        }, 300);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
