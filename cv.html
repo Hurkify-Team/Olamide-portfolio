@@ -520,12 +520,14 @@
 
     @page {
       size: A4;
-      margin: 5mm;
+      margin: 0;
     }
 
     @media print {
       html,
       body {
+        width: 210mm;
+        height: 297mm;
         margin: 0 !important;
         padding: 0 !important;
         background: #e9eef6;
@@ -533,7 +535,6 @@
         font-size: 11px;
         line-height: 1.28;
         font-family: "Manrope", "Sora", sans-serif;
-        overflow: visible !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -546,12 +547,12 @@
       }
 
       .container {
-        width: 100%;
-        max-width: none;
-        min-height: 0;
+        width: 210mm;
+        max-width: 210mm;
+        min-height: 297mm;
         height: auto;
-        margin: 0;
-        padding: 0;
+        margin: 0 auto;
+        padding: 7mm 8mm 6mm;
         background: #ffffff;
         display: flex;
         flex-direction: column;
@@ -567,15 +568,13 @@
 
       .hero {
         margin-bottom: 2.6mm;
-        padding: 3.8mm 4.2mm 3.2mm;
-        grid-template-columns: 18mm 1fr;
-        gap: 3mm;
-        align-items: start;
+        padding: 4mm 4.6mm 3.8mm;
+        grid-template-columns: 19mm 1fr;
+        gap: 3.5mm;
         border: 1px solid #c8d8ee;
         border-radius: 6px;
         background: linear-gradient(135deg, #f4f8ff 0%, #e7eefc 100%);
         color: #0f172a;
-        overflow: visible;
         break-inside: avoid;
         page-break-inside: avoid;
       }
@@ -585,8 +584,8 @@
       }
 
       .avatar {
-        width: 16mm;
-        height: 16mm;
+        width: 17mm;
+        height: 17mm;
         border-width: 1mm;
         border-color: rgba(255, 255, 255, 0.95);
         box-shadow: none;
@@ -611,7 +610,7 @@
         margin-top: 0;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.9mm 1.2mm;
+        gap: 1.1mm 1.5mm;
       }
 
       .contact-item {
@@ -639,13 +638,13 @@
         line-height: 1.15;
         color: #0f172a;
         font-weight: 600;
-        overflow-wrap: anywhere;
+        word-break: break-word;
       }
 
       .layout {
         grid-template-columns: 1.35fr 0.95fr;
-        gap: 2.6mm;
-        margin-bottom: 2mm;
+        gap: 3mm;
+        margin-bottom: 2.6mm;
       }
 
       .card {
