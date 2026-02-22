@@ -568,8 +568,8 @@
       .hero {
         margin-bottom: 4mm;
         padding: 7mm 8mm 6mm;
-        grid-template-columns: 26mm 1fr;
-        gap: 6mm;
+        grid-template-columns: 24mm 1fr;
+        gap: 5mm;
         border: 0;
         border-radius: 8px;
         background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
@@ -583,8 +583,8 @@
       }
 
       .avatar {
-        width: 24mm;
-        height: 24mm;
+        width: 22mm;
+        height: 22mm;
         border-width: 1.5mm;
         border-color: rgba(255, 255, 255, 0.9);
         box-shadow: none;
@@ -600,41 +600,44 @@
       .tagline {
         margin-top: 1.6mm;
         margin-bottom: 2.1mm;
-        font-size: 12px;
+        font-size: 9px;
         letter-spacing: 0.08em;
         color: rgba(248, 251, 255, 0.92);
       }
 
       .contact-grid {
         margin-top: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.8mm 3mm;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5mm 2mm;
       }
 
       .contact-item {
-        min-height: 0;
-        border: 0;
-        border-radius: 999px;
-        padding: 1.3mm 2.4mm;
+        min-width: 0;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 4px;
+        padding: 1.4mm 1.8mm;
         background: rgba(255, 255, 255, 0.14);
-        display: inline-flex;
-        align-items: center;
-        gap: 1.1mm;
+        display: grid;
+        gap: 0.4mm;
       }
 
       .contact-item span {
-        font-size: 12px;
+        font-size: 7px;
         margin: 0;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-weight: 700;
         color: rgba(248, 251, 255, 0.78);
       }
 
       .contact-item p,
       .contact-item a {
-        font-size: 12px;
+        font-size: 9px;
+        line-height: 1.2;
         color: #ffffff;
         font-weight: 700;
-        word-break: normal;
+        word-break: break-word;
       }
 
       .layout {
