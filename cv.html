@@ -532,8 +532,8 @@
         padding: 0 !important;
         background: #e9eef6;
         color: #0f172a;
-        font-size: 12px;
-        line-height: 1.35;
+        font-size: 11px;
+        line-height: 1.28;
         font-family: "Manrope", "Sora", sans-serif;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -549,9 +549,10 @@
       .container {
         width: 210mm;
         max-width: 210mm;
-        height: 297mm;
+        min-height: 297mm;
+        height: auto;
         margin: 0 auto;
-        padding: 10mm 12mm 9mm;
+        padding: 7mm 8mm 6mm;
         background: #ffffff;
         display: flex;
         flex-direction: column;
@@ -566,14 +567,14 @@
       }
 
       .hero {
-        margin-bottom: 4mm;
-        padding: 7mm 8mm 6mm;
-        grid-template-columns: 24mm 1fr;
-        gap: 5mm;
-        border: 0;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
-        color: #f8fbff;
+        margin-bottom: 2.6mm;
+        padding: 4mm 4.6mm 3.8mm;
+        grid-template-columns: 19mm 1fr;
+        gap: 3.5mm;
+        border: 1px solid #c8d8ee;
+        border-radius: 6px;
+        background: linear-gradient(135deg, #f4f8ff 0%, #e7eefc 100%);
+        color: #0f172a;
         break-inside: avoid;
         page-break-inside: avoid;
       }
@@ -583,93 +584,93 @@
       }
 
       .avatar {
-        width: 22mm;
-        height: 22mm;
-        border-width: 1.5mm;
-        border-color: rgba(255, 255, 255, 0.9);
+        width: 17mm;
+        height: 17mm;
+        border-width: 1mm;
+        border-color: rgba(255, 255, 255, 0.95);
         box-shadow: none;
       }
 
       .name {
-        font-size: 21px;
-        line-height: 1.06;
-        color: #ffffff;
+        font-size: 17px;
+        line-height: 1.08;
+        color: #0f172a;
         letter-spacing: -0.01em;
       }
 
       .tagline {
-        margin-top: 1.6mm;
-        margin-bottom: 2.1mm;
-        font-size: 9px;
-        letter-spacing: 0.08em;
-        color: rgba(248, 251, 255, 0.92);
+        margin-top: 0.7mm;
+        margin-bottom: 1.6mm;
+        font-size: 8px;
+        letter-spacing: 0.05em;
+        color: #1e3a8a;
       }
 
       .contact-grid {
         margin-top: 0;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.5mm 2mm;
+        gap: 1.1mm 1.5mm;
       }
 
       .contact-item {
         min-width: 0;
-        border: 1px solid rgba(255, 255, 255, 0.28);
+        border: 1px solid #c8d8ee;
         border-radius: 4px;
-        padding: 1.4mm 1.8mm;
-        background: rgba(255, 255, 255, 0.14);
+        padding: 1mm 1.2mm;
+        background: rgba(255, 255, 255, 0.86);
         display: grid;
-        gap: 0.4mm;
+        gap: 0.2mm;
       }
 
       .contact-item span {
-        font-size: 7px;
+        font-size: 6px;
         margin: 0;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         font-weight: 700;
-        color: rgba(248, 251, 255, 0.78);
+        color: #475569;
       }
 
       .contact-item p,
       .contact-item a {
-        font-size: 9px;
-        line-height: 1.2;
-        color: #ffffff;
-        font-weight: 700;
+        font-size: 7px;
+        line-height: 1.15;
+        color: #0f172a;
+        font-weight: 600;
         word-break: break-word;
       }
 
       .layout {
         grid-template-columns: 1.35fr 0.95fr;
-        gap: 4mm;
-        margin-bottom: 3.5mm;
+        gap: 3mm;
+        margin-bottom: 2.6mm;
       }
 
       .card {
-        padding: 3.3mm 3.6mm;
+        padding: 2.4mm 2.7mm;
         break-inside: avoid;
         page-break-inside: avoid;
       }
 
       .card h2 {
-        margin: 0 0 2.4mm;
-        font-size: 12px;
+        margin: 0 0 1.8mm;
+        font-size: 9px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #0f172a;
-        padding-bottom: 1.2mm;
+        padding-bottom: 0.8mm;
         border-bottom: 1px solid #dbe5f2;
       }
 
       .summary {
-        font-size: 12px;
-        line-height: 1.42;
+        font-size: 11px;
+        line-height: 1.28;
         color: #334155;
       }
 
       .section-space {
-        margin-top: 3.2mm;
+        margin-top: 2.2mm;
       }
 
       .timeline {
@@ -682,8 +683,8 @@
       }
 
       .role-item {
-        margin-bottom: 3mm;
-        padding-bottom: 2.2mm;
+        margin-bottom: 2.1mm;
+        padding-bottom: 1.5mm;
         border-bottom: 1px dashed #dbe5f2;
       }
 
@@ -698,47 +699,47 @@
       }
 
       .role-head {
-        margin-bottom: 1mm;
-        gap: 1.4mm;
+        margin-bottom: 0.55mm;
+        gap: 1mm;
       }
 
       .role-title {
-        font-size: 12px;
+        font-size: 9px;
       }
 
       .role-company {
-        font-size: 12px;
+        font-size: 8px;
       }
 
       .role-date {
-        font-size: 12px;
+        font-size: 8px;
         color: #64748b;
       }
 
       .role-item ul {
         margin: 0;
-        padding-left: 3.4mm;
-        font-size: 12px;
-        line-height: 1.36;
+        padding-left: 3.1mm;
+        font-size: 11px;
+        line-height: 1.24;
         color: #334155;
       }
 
       .role-item ul li {
-        margin-bottom: 0.55mm;
+        margin-bottom: 0.35mm;
       }
 
       .list,
       .two-col-list {
         margin: 0;
-        padding-left: 3.4mm;
-        font-size: 12px;
-        line-height: 1.36;
+        padding-left: 3.1mm;
+        font-size: 11px;
+        line-height: 1.24;
         color: #334155;
       }
 
       .list li,
       .two-col-list li {
-        margin-bottom: 0.6mm;
+        margin-bottom: 0.35mm;
       }
 
       aside .two-col-list {
@@ -746,14 +747,14 @@
       }
 
       #certifications {
-        margin-top: 3mm;
+        margin-top: 1.8mm;
       }
 
       #certifications .two-col-list {
         columns: 2;
-        column-gap: 4mm;
-        font-size: 12px;
-        line-height: 1.3;
+        column-gap: 2.8mm;
+        font-size: 11px;
+        line-height: 1.2;
       }
 
       .reveal {
