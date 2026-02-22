@@ -477,6 +477,42 @@
       text-underline-offset: 3px;
     }
 
+    .scroll-fab-wrap {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: grid;
+      gap: 10px;
+      z-index: 60;
+    }
+
+    .scroll-fab {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      border: 1px solid rgba(14, 31, 53, 0.2);
+      background: rgba(255, 255, 255, 0.94);
+      color: #0f172a;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 24px rgba(11, 21, 39, 0.14);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    .scroll-fab:hover,
+    .scroll-fab:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 28px rgba(11, 21, 39, 0.2);
+      outline: none;
+    }
+
+    .scroll-fab[hidden] {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -516,6 +552,17 @@
         width: 104px;
         height: 104px;
       }
+
+      .scroll-fab-wrap {
+        right: 14px;
+        bottom: 14px;
+        gap: 8px;
+      }
+
+      .scroll-fab {
+        width: 42px;
+        height: 42px;
+      }
     }
 
     @page {
@@ -542,7 +589,8 @@
       .page-nav,
       .hint,
       .back-link,
-      #about-me {
+      #about-me,
+      .scroll-fab-wrap {
         display: none !important;
       }
 
@@ -984,9 +1032,24 @@
     <a class="back-link" href="index.html" aria-label="Back to portfolio home">← Back to Portfolio</a>
   </div>
 
+  <div class="scroll-fab-wrap" aria-label="Scroll controls">
+    <button id="scrollTopBtn" class="scroll-fab" type="button" aria-label="Back to top" title="Back to top" hidden>
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M7 14l5-5 5 5"></path>
+      </svg>
+    </button>
+    <button id="scrollBottomBtn" class="scroll-fab" type="button" aria-label="Scroll to bottom" title="Scroll to bottom">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M7 10l5 5 5-5"></path>
+      </svg>
+    </button>
+  </div>
+
   <script>
     const titleBeforePrint = document.title;
     const downloadPdfButton = document.getElementById("downloadPdfButton");
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    const scrollBottomBtn = document.getElementById("scrollBottomBtn");
 
     if (downloadPdfButton) {
       downloadPdfButton.addEventListener("click", () => {
@@ -997,6 +1060,36 @@
         }, 300);
       });
     }
+
+    const updateScrollButtons = () => {
+      const currentScroll = window.scrollY || document.documentElement.scrollTop;
+      const viewportHeight = window.innerHeight;
+      const fullHeight = document.documentElement.scrollHeight;
+
+      if (scrollTopBtn) {
+        scrollTopBtn.hidden = currentScroll < 100;
+      }
+
+      if (scrollBottomBtn) {
+        scrollBottomBtn.hidden = currentScroll + viewportHeight > fullHeight - 120;
+      }
+    };
+
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+
+    if (scrollBottomBtn) {
+      scrollBottomBtn.addEventListener("click", () => {
+        window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
+      });
+    }
+
+    window.addEventListener("scroll", updateScrollButtons, { passive: true });
+    window.addEventListener("resize", updateScrollButtons);
+    updateScrollButtons();
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
