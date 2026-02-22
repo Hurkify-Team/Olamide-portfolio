@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olamide Sobowale | Curriculum Vitae</title>
-  <meta name="description" content="Curriculum Vitae of Olamide Sobowale - ICT Officer, Software Engineer, FULL-STACK DEVELOPER, Programme Analyst, and Brand Manager.">
-  <meta property="og:title" content="Olamide Sobowale | Curriculum Vitae">
+  <title>Olamide Sobowale | About Me & Curriculum Vitae</title>
+  <meta name="description" content="About Me and Curriculum Vitae of Olamide Sobowale - ICT Officer, Software Engineer, FULL-STACK DEVELOPER, Programme Analyst, and Brand Manager.">
+  <meta property="og:title" content="Olamide Sobowale | About Me & Curriculum Vitae">
   <meta property="og:description" content="Dedicated ICT professional with proven impact in software engineering, brand management, and ICT analysis.">
   <meta property="og:image" content="images/og.png">
   <meta property="og:type" content="website">
@@ -300,6 +300,61 @@
       margin-top: 16px;
     }
 
+    .about-card {
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card::after {
+      content: "";
+      position: absolute;
+      right: -74px;
+      bottom: -86px;
+      width: 230px;
+      height: 230px;
+      border-radius: 999px;
+      background: radial-gradient(circle at center, rgba(15, 118, 110, 0.16), transparent 70%);
+      pointer-events: none;
+    }
+
+    .about-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-lead {
+      margin: 0 0 12px;
+      color: #0f766e;
+      font-size: 0.88rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .about-story {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.72;
+      max-width: 88ch;
+    }
+
+    .about-story + .about-story {
+      margin-top: 12px;
+    }
+
+    .about-quote {
+      margin: 16px 0 0;
+      padding: 12px 14px;
+      border-left: 4px solid rgba(29, 78, 216, 0.75);
+      border-radius: 10px;
+      background: rgba(29, 78, 216, 0.08);
+      color: #1e293b;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
     .timeline {
       position: relative;
       margin-top: 2px;
@@ -502,6 +557,7 @@
       </div>
 
       <div class="nav-links">
+        <a href="#about-me">About Me</a>
         <a href="#summary">Summary</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
@@ -540,6 +596,40 @@
         </div>
       </div>
     </header>
+
+    <section id="about-me" class="card about-card reveal" aria-labelledby="about-me-title">
+      <h2 id="about-me-title">About Me</h2>
+      <p class="about-lead">Faith. Growth. Impact.</p>
+
+      <p class="about-story">
+        I was born in Lagos, Nigeria, in 1992, and raised in Mushin, a place that teaches strength early.
+        Growing up as the third child in a family of twelve, in an environment that demanded resilience,
+        I learned how to stand firm, adapt, and keep moving forward even when life was hard.
+      </p>
+
+      <p class="about-story">
+        From a young age, I found purpose in computing and music. I explored technology with curiosity and expressed
+        myself through Afrobeat, creating melodies simply because I loved it. Music became a lifestyle, while computing
+        became a path. During my secondary school years, my passion for technology earned me a scholarship opportunity
+        with NIIT, though financial limitations stopped me from taking it. That moment did not break me; it strengthened my resolve.
+      </p>
+
+      <p class="about-story">
+        My journey beyond home led me to The Polytechnic of Iresi, Osun State, where I truly understood responsibility
+        and adulthood. I later continued my education at the University of the People, completing a Bachelor's degree in
+        Computer Science and further pursuing a double honour in Health Science. These experiences shaped my mindset and
+        broadened my vision.
+      </p>
+
+      <p class="about-story">
+        Today, my story is rooted in faith, growth, and impact. I believe that where I come from gives meaning to where
+        I am going. My goal is to build, serve, and leave a legacy that proves difficult beginnings do not limit great outcomes.
+      </p>
+
+      <blockquote class="about-quote">
+        "A sensible man may discover a way out, but it takes a brave man to walk that path and succeed."
+      </blockquote>
+    </section>
 
     <div class="layout">
       <main>
