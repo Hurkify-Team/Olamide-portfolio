@@ -1,0 +1,7 @@
+[build]
+publish = "."
+
+[[redirects]]
+from = "/cv"
+to = "/cv.html"
+status = 200
