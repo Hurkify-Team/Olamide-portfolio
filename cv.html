@@ -520,7 +520,7 @@
 
     @page {
       size: A4;
-      margin: 4mm;
+      margin: 0;
     }
 
     @media print {
@@ -529,6 +529,8 @@
         background: #fff;
         font-size: 10px;
         line-height: 1.28;
+        margin: 0 !important;
+        padding: 0 !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -541,9 +543,13 @@
       }
 
       .container {
-        width: 100%;
-        max-width: none;
-        margin: 0;
+        width: 210mm;
+        max-width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 5mm 6mm 5mm;
+        display: flex;
+        flex-direction: column;
       }
 
       .hero,
@@ -608,7 +614,9 @@
       .layout {
         grid-template-columns: 1.14fr 0.86fr;
         gap: 6px;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
+        flex: 1;
+        align-items: start;
       }
 
       .card {
@@ -693,7 +701,7 @@
       }
 
       #certifications {
-        margin-top: 6px;
+        margin-top: 0;
       }
 
       #certifications .two-col-list {
