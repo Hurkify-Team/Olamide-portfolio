@@ -518,20 +518,32 @@
       }
     }
 
+    @page {
+      size: A4;
+      margin: 8mm;
+    }
+
     @media print {
+      html,
       body {
         background: #fff;
+        font-size: 10.5px;
+        line-height: 1.35;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
 
       .page-nav,
       .hint,
-      .back-link {
+      .back-link,
+      #about-me {
         display: none !important;
       }
 
       .container {
         width: 100%;
         max-width: none;
+        margin: 0;
       }
 
       .hero,
@@ -539,6 +551,156 @@
         box-shadow: none;
         border-color: #c9d2df;
         background: #fff;
+        border-radius: 10px;
+      }
+
+      .hero {
+        margin-bottom: 8px;
+        padding: 8px 10px;
+        grid-template-columns: 76px 1fr;
+        gap: 10px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .hero::after {
+        display: none;
+      }
+
+      .avatar {
+        width: 70px;
+        height: 70px;
+        border-width: 2px;
+        box-shadow: none;
+      }
+
+      .name {
+        font-size: 1.65rem;
+      }
+
+      .tagline {
+        margin-top: 4px;
+        font-size: 0.68rem;
+      }
+
+      .contact-grid {
+        margin-top: 8px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+      }
+
+      .contact-item {
+        min-height: 0;
+        padding: 6px 8px;
+        border-radius: 8px;
+      }
+
+      .contact-item span {
+        font-size: 0.5rem;
+        margin-bottom: 2px;
+      }
+
+      .contact-item p,
+      .contact-item a {
+        font-size: 0.66rem;
+      }
+
+      .layout {
+        grid-template-columns: 1.14fr 0.86fr;
+        gap: 8px;
+        margin-bottom: 8px;
+      }
+
+      .card {
+        padding: 9px 10px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .card h2 {
+        margin: 0 0 6px;
+        font-size: 1.08rem;
+      }
+
+      .summary {
+        font-size: 0.72rem;
+        line-height: 1.38;
+      }
+
+      .section-space {
+        margin-top: 8px;
+      }
+
+      .timeline {
+        padding-left: 14px;
+      }
+
+      .timeline::before {
+        left: 4px;
+        top: 6px;
+        bottom: 6px;
+      }
+
+      .role-item {
+        margin-bottom: 8px;
+      }
+
+      .role-item::before {
+        left: -12px;
+        width: 7px;
+        height: 7px;
+        box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.16);
+      }
+
+      .role-head {
+        margin-bottom: 2px;
+      }
+
+      .role-title {
+        font-size: 0.78rem;
+      }
+
+      .role-company {
+        font-size: 0.67rem;
+      }
+
+      .role-date {
+        font-size: 0.6rem;
+      }
+
+      .role-item ul {
+        margin-top: 4px;
+        padding-left: 12px;
+        font-size: 0.68rem;
+        line-height: 1.34;
+      }
+
+      .role-item ul li {
+        margin-bottom: 2px;
+      }
+
+      .list,
+      .two-col-list {
+        margin-top: 4px;
+        padding-left: 12px;
+        font-size: 0.68rem;
+        line-height: 1.34;
+      }
+
+      .list li,
+      .two-col-list li {
+        margin-bottom: 2px;
+      }
+
+      #certifications {
+        margin-top: 8px;
+      }
+
+      #certifications .two-col-list {
+        columns: 3;
+        column-gap: 10px;
+        font-size: 0.65rem;
+        line-height: 1.28;
       }
 
       .reveal {
